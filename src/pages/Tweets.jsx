@@ -3,13 +3,33 @@ import { Loader } from 'components/Loader/Loader';
 import { TweetsList } from 'components/TweetsList/TweetsList';
 import { useEffect, useState } from 'react';
 import { toast } from 'react-toastify';
-import { hendleFetchTotal, hendleFetchTweets } from 'services/api';
+import {
+    hendleAddFollow,
+    hendleDeleteFollow,
+    hendleFetchFollow,
+    hendleFetchTotal,
+    hendleFetchTweets,
+} from 'services/api';
 
 const Tweets = () => {
     const [isLoading, setIsloading] = useState(false);
     const [total, setTotal] = useState(null);
     const [page, setPage] = useState(1);
     const [tweets, setTweets] = useState([]);
+    const [folowingId, setFolowingId] = useState([]);
+
+    useEffect(() => {
+        hendleFetchFollow().then(data => {
+            if (data.length > 0) {
+                data.map(({ id, tweetsID }) => {
+                    return setFolowingId(prevState => [
+                        ...prevState,
+                        { id, tweetsID },
+                    ]);
+                });
+            }
+        });
+    }, []);
 
     useEffect(() => {
         setIsloading(true);
@@ -49,11 +69,23 @@ const Tweets = () => {
         setPage(prevPage => (prevPage += 1));
     };
 
+    const onFollowClick = (e, id) => {
+        const i = folowingId.findIndex(val => val.tweetsID === id);
+        if (i >= 0) {
+            hendleDeleteFollow(folowingId[i].id);
+            folowingId.splice(i, 1);
+        } else {
+            hendleAddFollow({ tweetsID: id }).then(({ id, tweetsID }) => {
+                setFolowingId(prevstate => [...prevstate, { id, tweetsID }]);
+            });
+        }
+    };
+
     return (
         <Container>
             <BtnGoBack to={'/'}>Go back</BtnGoBack>
             {isLoading && <Loader />}
-            <TweetsList data={tweets} />
+            <TweetsList data={tweets} clickFunk={onFollowClick} />
             {total && tweets.length < total && (
                 <BtnLoadMore type="button" onClick={hendleClick}>
                     Load more

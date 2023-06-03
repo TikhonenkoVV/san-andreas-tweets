@@ -11,9 +11,27 @@ import logo from '../../img/sprite.svg';
 import { Icon } from 'components/Icon/Icon';
 import img from '../../img/twitt-background.png';
 import { PhotoFrame } from 'components/PhotoFrame/PhotoFrame';
-import { formatString } from 'services/numbet-to-string';
+import { formatString } from 'services/number-to-string';
 
-export const Tweet = ({ data }) => {
+export const Tweet = ({ data, clickFunk }) => {
+    const hendleClick = (e, id) => {
+        e.target.classList.toggle('active');
+        const textContent = e.target.textContent;
+        textContent === 'Following'
+            ? (e.target.textContent = 'Follow')
+            : (e.target.textContent = 'Following');
+        const followersCount = Number(
+            e.target.previousSibling.getAttribute('datatype')
+        );
+        e.target.classList.contains('active')
+            ? (e.target.previousSibling.textContent = `
+            ${formatString(followersCount + 1)} Followers`)
+            : (e.target.previousSibling.textContent = `
+            ${formatString(followersCount)} Followers`);
+
+        clickFunk(e, id);
+    };
+
     return (
         <>
             {data.map(({ id, avatar, twitts, followers }) => {
@@ -36,10 +54,15 @@ export const Tweet = ({ data }) => {
                             <TweetStats>
                                 {formatString(twitts)} tweets
                             </TweetStats>
-                            <TweetStats>
+                            <TweetStats datatype={followers}>
                                 {formatString(followers)} Followers
                             </TweetStats>
-                            <BtnFollow type="button">Following</BtnFollow>
+                            <BtnFollow
+                                type="button"
+                                onClick={e => hendleClick(e, id)}
+                            >
+                                Follow
+                            </BtnFollow>
                         </BottomBox>
                     </TweetCard>
                 );

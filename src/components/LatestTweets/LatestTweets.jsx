@@ -8,54 +8,31 @@ import {
     Post,
     UserTitle,
 } from './LatestTweets.styled';
-import firstAvatar from '../../img/AmandaDeSanta.webp';
-import secondAvatar from '../../img/FranklinClinton.webp';
-import thirdAvatar from '../../img/TanishaJackson.webp';
+import { persons } from '../../services/data';
 
 export const LatestTweets = () => {
     return (
         <Container>
             <LatestTweetsTitle>Latest tweets</LatestTweetsTitle>
             <LatestTweetsBox>
-                <LatestTweetsCard>
-                    <UserTitle>Amanda De Santa</UserTitle>
-                    <LatestTweetsWrapper>
-                        <LatestTweetsAvatar src={firstAvatar} />
-                        <Post>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing
-                            elit. Placeat esse excepturi sit accusamus dolorem,
-                            aliquid nam, veritatis architecto, fuga quisquam
-                            suscipit? Tenetur quos hic similique asperiores
-                            nobis odio laborum odit.
-                        </Post>
-                    </LatestTweetsWrapper>
-                </LatestTweetsCard>
-                <LatestTweetsCard>
-                    <UserTitle>Franklin Clinton</UserTitle>
-                    <LatestTweetsWrapper>
-                        <LatestTweetsAvatar src={secondAvatar} />
-                        <Post>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing
-                            elit. Placeat esse excepturi sit accusamus dolorem,
-                            aliquid nam, veritatis architecto, fuga quisquam
-                            suscipit? Tenetur quos hic similique asperiores
-                            nobis odio laborum odit.
-                        </Post>
-                    </LatestTweetsWrapper>
-                </LatestTweetsCard>
-                <LatestTweetsCard>
-                    <UserTitle>Tanisha Jackson</UserTitle>
-                    <LatestTweetsWrapper>
-                        <LatestTweetsAvatar src={thirdAvatar} />
-                        <Post>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing
-                            elit. Placeat esse excepturi sit accusamus dolorem,
-                            aliquid nam, veritatis architecto, fuga quisquam
-                            suscipit? Tenetur quos hic similique asperiores
-                            nobis odio laborum odit.
-                        </Post>
-                    </LatestTweetsWrapper>
-                </LatestTweetsCard>
+                {persons.map(({ id, user, avatar }) => {
+                    return (
+                        <LatestTweetsCard key={id}>
+                            <UserTitle>{user}</UserTitle>
+                            <LatestTweetsWrapper>
+                                <LatestTweetsAvatar src={avatar} />
+                                <Post>
+                                    Lorem ipsum, dolor sit amet consectetur
+                                    adipisicing elit. Architecto quod tempore
+                                    repellat? Id molestiae sit minima dolorum
+                                    doloribus vero doloremque pariatur
+                                    blanditiis ea unde? Molestiae error
+                                    assumenda quidem similique. Corrupti.
+                                </Post>
+                            </LatestTweetsWrapper>
+                        </LatestTweetsCard>
+                    );
+                })}
             </LatestTweetsBox>
         </Container>
     );
