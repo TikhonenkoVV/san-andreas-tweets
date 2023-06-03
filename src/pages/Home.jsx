@@ -1,6 +1,6 @@
 import { Section } from 'components/App.styled';
 import { Hero } from 'components/Hero/Hero';
-import { LatestTwitts } from 'components/LatestTwitts/LatestTwitts';
+import { LatestTweets } from 'components/LatestTweets/LatestTweets';
 
 const Home = () => {
     return (
@@ -9,7 +9,7 @@ const Home = () => {
                 <Hero />
             </Section>
             <Section>
-                <LatestTwitts />
+                <LatestTweets />
             </Section>
         </>
     );

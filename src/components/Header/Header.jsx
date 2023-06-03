@@ -15,7 +15,7 @@ export const Header = () => {
                     <Logotype to={'/'}></Logotype>
                     <Nav>
                         <NavLinkStyled to={'/'}>Home</NavLinkStyled>
-                        <NavLinkStyled to={'twitts'}>Twitts</NavLinkStyled>
+                        <NavLinkStyled to={'tweets'}>Twitts</NavLinkStyled>
                     </Nav>
                 </Wrapper>
             </Container>

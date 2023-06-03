@@ -3,16 +3,16 @@ import { Layout } from './Layout/Layout';
 import { lazy } from 'react';
 
 const Home = lazy(() => import('../pages/Home'));
-const Twitts = lazy(() => import('../pages/Twitts'));
+const Tweets = lazy(() => import('../pages/Tweets'));
 
 export const App = () => {
-  return (
-    <Routes>
-      <Route path="/" element={<Layout />}>
-        <Route index element={<Home />} />
-        <Route path="twitts" element={<Twitts />} />
-      </Route>
-      <Route path="*" element={<Navigate to="/" />} />
-    </Routes>
-  );
+    return (
+        <Routes>
+            <Route path="/" element={<Layout />}>
+                <Route index element={<Home />} />
+                <Route path="tweets" element={<Tweets />} />
+            </Route>
+            <Route path="*" element={<Navigate to="/" />} />
+        </Routes>
+    );
 };

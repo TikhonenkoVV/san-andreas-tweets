@@ -24,7 +24,7 @@ export const HomeBox = styled.div`
         padding-right: 40px;
         height: 576px;
     }
-    @media (min-width: ${props => props.theme.breakpoints.m}) {
+    @media (min-width: ${props => props.theme.breakpoints.l}) {
         height: 680px;
     }
 `;
@@ -97,6 +97,9 @@ export const Decor = styled.div`
         background-color: #000;
         @media (min-width: ${props => props.theme.breakpoints.m}) {
             left: -20px;
+            height: 230px;
+        }
+        @media (min-width: ${props => props.theme.breakpoints.l}) {
             height: 290px;
         }
     }

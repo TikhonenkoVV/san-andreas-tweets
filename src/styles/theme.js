@@ -8,8 +8,8 @@ export const theme = Object.freeze({
         active: '#5cd3a8',
     },
     fontSizes: {
-        small: '14px',
-        medium: '18px',
+        small: '12px',
+        medium: '16px',
         large: '20px',
         xl: '30px',
         xxl: '42px',

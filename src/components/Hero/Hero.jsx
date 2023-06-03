@@ -14,7 +14,7 @@ export const Hero = () => {
     return (
         <HomeContainer>
             <HomeBox>
-                <HomeTitle>Welcome to San Andreas Twitts</HomeTitle>
+                <HomeTitle>Welcome to San Andreas Tweets</HomeTitle>
                 <DescriptionBox>
                     <Description>
                         People you know <Span />
@@ -26,7 +26,7 @@ export const Hero = () => {
                         People who speek <Span />
                     </Description>
                 </DescriptionBox>
-                <Decor></Decor>
+                <Decor />
             </HomeBox>
             <HomeBox background={background} />
         </HomeContainer>

@@ -3,45 +3,45 @@ import {
     BtnFollow,
     PhotoFrameBox,
     TopBox,
-    TwittCard,
-    TwittLogo,
-    TwittStats,
-} from './Twitt.styled';
+    TweetCard,
+    TweetLogo,
+    TweetStats,
+} from './Tweet.styled';
 import logo from '../../img/sprite.svg';
 import { Icon } from 'components/Icon/Icon';
 import img from '../../img/twitt-background.png';
 import { PhotoFrame } from 'components/PhotoFrame/PhotoFrame';
 import { formatString } from 'services/numbet-to-string';
 
-export const Twitt = ({ data }) => {
+export const Tweet = ({ data }) => {
     return (
         <>
             {data.map(({ id, avatar, twitts, followers }) => {
                 return (
-                    <TwittCard key={id}>
+                    <TweetCard key={id}>
                         <TopBox>
-                            <TwittLogo>
+                            <TweetLogo>
                                 <Icon
                                     w={76}
                                     h={22}
                                     use={`${logo}#twitt-logo`}
                                 />
-                            </TwittLogo>
+                            </TweetLogo>
                             <img src={img} alt="art" />
                             <PhotoFrameBox>
                                 <PhotoFrame photo={avatar} />
                             </PhotoFrameBox>
                         </TopBox>
                         <BottomBox>
-                            <TwittStats>
+                            <TweetStats>
                                 {formatString(twitts)} tweets
-                            </TwittStats>
-                            <TwittStats>
+                            </TweetStats>
+                            <TweetStats>
                                 {formatString(followers)} Followers
-                            </TwittStats>
+                            </TweetStats>
                             <BtnFollow type="button">Following</BtnFollow>
                         </BottomBox>
-                    </TwittCard>
+                    </TweetCard>
                 );
             })}
         </>

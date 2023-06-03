@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 
-export const TwittCard = styled.li`
+export const TweetCard = styled.li`
     width: 374px;
     height: 460px;
     background-image: linear-gradient(
@@ -39,7 +39,7 @@ export const TopBox = styled.div`
     }
 `;
 
-export const TwittLogo = styled.div`
+export const TweetLogo = styled.div`
     position: absolute;
     top: 20px;
     left: 20px;
@@ -58,7 +58,7 @@ export const BottomBox = styled.div`
     padding-top: 62px;
 `;
 
-export const TwittStats = styled.p`
+export const TweetStats = styled.p`
     margin-bottom: 16px;
     text-align: center;
     text-transform: uppercase;

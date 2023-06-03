@@ -5,7 +5,6 @@ import {
     CircleOutert,
     UserPhoto,
 } from './PhotoFrame.styled';
-// import avatar from '../../img/avatar.png';
 
 export const PhotoFrame = ({ photo }) => {
     return (
