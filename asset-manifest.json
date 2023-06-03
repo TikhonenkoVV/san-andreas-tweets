@@ -1,9 +1,10 @@
 {
   "files": {
     "main.css": "/san-andreas-twitts/static/css/main.7cda0caf.css",
-    "main.js": "/san-andreas-twitts/static/js/main.55125566.js",
+    "main.js": "/san-andreas-twitts/static/js/main.403839fa.js",
     "static/js/501.aadc2caa.chunk.js": "/san-andreas-twitts/static/js/501.aadc2caa.chunk.js",
-    "static/js/130.4cf814f4.chunk.js": "/san-andreas-twitts/static/js/130.4cf814f4.chunk.js",
+    "static/js/73.4972efdd.chunk.js": "/san-andreas-twitts/static/js/73.4972efdd.chunk.js",
+    "static/js/384.635a43e5.chunk.js": "/san-andreas-twitts/static/js/384.635a43e5.chunk.js",
     "static/media/background.jpg": "/san-andreas-twitts/static/media/background.9856e0df4c291bca45bd.jpg",
     "static/media/montserrat-v25-latin_cyrillic-600.svg": "/san-andreas-twitts/static/media/montserrat-v25-latin_cyrillic-600.b7a40d9c20fdd266bd2451d023069d29.svg",
     "static/media/montserrat-v25-latin_cyrillic-500.svg": "/san-andreas-twitts/static/media/montserrat-v25-latin_cyrillic-500.5d6f0e09e83ecf8f5f8580125b2ecd44.svg",
@@ -16,16 +17,16 @@
     "static/media/montserrat-v25-latin_cyrillic-600.eot": "/san-andreas-twitts/static/media/montserrat-v25-latin_cyrillic-600.b0e3e940647c7aa24bea.eot",
     "static/media/logo-m.svg": "/san-andreas-twitts/static/media/logo-m.f66cc7e6678f17c756efaa43d906b30e.svg",
     "static/media/montserrat-v25-latin_cyrillic-500.woff2": "/san-andreas-twitts/static/media/montserrat-v25-latin_cyrillic-500.6bba3d8aaab8fe428846.woff2",
-    "static/media/avatar.png": "/san-andreas-twitts/static/media/avatar.fd97859d69e9742cbe93.png",
     "static/media/sprite.svg": "/san-andreas-twitts/static/media/sprite.0a63af097a030fba273fdc6afac3bf3f.svg",
     "index.html": "/san-andreas-twitts/index.html",
     "main.7cda0caf.css.map": "/san-andreas-twitts/static/css/main.7cda0caf.css.map",
-    "main.55125566.js.map": "/san-andreas-twitts/static/js/main.55125566.js.map",
+    "main.403839fa.js.map": "/san-andreas-twitts/static/js/main.403839fa.js.map",
     "501.aadc2caa.chunk.js.map": "/san-andreas-twitts/static/js/501.aadc2caa.chunk.js.map",
-    "130.4cf814f4.chunk.js.map": "/san-andreas-twitts/static/js/130.4cf814f4.chunk.js.map"
+    "73.4972efdd.chunk.js.map": "/san-andreas-twitts/static/js/73.4972efdd.chunk.js.map",
+    "384.635a43e5.chunk.js.map": "/san-andreas-twitts/static/js/384.635a43e5.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.7cda0caf.css",
-    "static/js/main.55125566.js"
+    "static/js/main.403839fa.js"
   ]
 }
