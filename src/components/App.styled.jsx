@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import { Link } from 'react-router-dom';
 
 export const MainStyled = styled.main`
     height: 100%;
@@ -35,6 +36,29 @@ export const Container = styled.div`
     }
     @media (min-width: ${props => props.theme.breakpoints.l}) {
         width: ${props => props.theme.breakpoints.l};
+    }
+`;
+
+export const BtnGoBack = styled(Link)`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 196px;
+    height: 50px;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    text-transform: uppercase;
+    color: #373737;
+    font-family: 'Montserrat', sans-serif;
+    font-size: ${props => props.theme.fontSizes.large};
+    font-weight: 600;
+    background-color: ${props => props.theme.colors.text};
+    transition: background-color 250ms, color 250ms;
+    &:hover {
+        color: ${props => props.theme.colors.text};
+        background-color: ${props => props.theme.colors.hover};
     }
 `;
 

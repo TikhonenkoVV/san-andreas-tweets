@@ -19,10 +19,11 @@ export const CircleFill = styled.div`
     left: 0;
     border: 9px solid #ebd8ff;
     border-radius: 50px;
+    background-color: ${props => props.theme.colors.accent};
     bottom: 45px;
     width: 100%;
     height: 100%;
-    z-index: 1;
+    z-index: -1;
 `;
 
 export const CircleOutert = styled.div`
