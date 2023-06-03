@@ -82,4 +82,9 @@ export const BtnFollow = styled.button`
     font-size: ${props => props.theme.fontSizes.large};
     font-weight: 600;
     background-color: ${props => props.theme.colors.text};
+    transition: background-color 250ms;
+    &:hover,
+    &.active {
+        background-color: ${props => props.theme.colors.active};
+    }
 `;

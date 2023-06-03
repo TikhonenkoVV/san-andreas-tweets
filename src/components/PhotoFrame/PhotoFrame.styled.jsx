@@ -4,6 +4,13 @@ export const CircleContainer = styled.div`
     position: relative;
     width: 80px;
     height: 80px;
+    padding: 9px;
+`;
+
+export const UserPhoto = styled.img`
+    width: 62px;
+    aspect-ratio: 1;
+    border-radius: 50%;
 `;
 
 export const CircleFill = styled.div`

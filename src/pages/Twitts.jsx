@@ -1,4 +1,4 @@
-import { Container } from 'components/App.styled';
+import { BtnLoadMore, Container } from 'components/App.styled';
 import { TwittsList } from 'components/TwittsList/TwittsList';
 import { useEffect, useState } from 'react';
 import { hendleFetchTwitts } from 'services/api';
@@ -29,9 +29,9 @@ const Twitts = () => {
     return (
         <Container>
             <TwittsList data={twitts} />
-            <button type="button" onClick={hendleClick}>
+            <BtnLoadMore type="button" onClick={hendleClick}>
                 Load more
-            </button>
+            </BtnLoadMore>
         </Container>
     );
 };

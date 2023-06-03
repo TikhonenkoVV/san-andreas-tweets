@@ -4,10 +4,14 @@ import { LatestTwitts } from 'components/LatestTwitts/LatestTwitts';
 
 const Home = () => {
     return (
-        <Section>
-            <Hero />
-            <LatestTwitts />
-        </Section>
+        <>
+            <Section>
+                <Hero />
+            </Section>
+            <Section>
+                <LatestTwitts />
+            </Section>
+        </>
     );
 };
 

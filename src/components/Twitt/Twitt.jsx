@@ -11,11 +11,12 @@ import logo from '../../img/sprite.svg';
 import { Icon } from 'components/Icon/Icon';
 import img from '../../img/twitt-background.png';
 import { PhotoFrame } from 'components/PhotoFrame/PhotoFrame';
+import { formatString } from 'services/numbet-to-string';
 
 export const Twitt = ({ data }) => {
     return (
         <>
-            {data.map(({ id, avatar, twitts, folowers }) => {
+            {data.map(({ id, avatar, twitts, followers }) => {
                 return (
                     <TwittCard key={id}>
                         <TopBox>
@@ -32,8 +33,12 @@ export const Twitt = ({ data }) => {
                             </PhotoFrameBox>
                         </TopBox>
                         <BottomBox>
-                            <TwittStats>777 tweets</TwittStats>
-                            <TwittStats>100,501 Followers</TwittStats>
+                            <TwittStats>
+                                {formatString(twitts)} tweets
+                            </TwittStats>
+                            <TwittStats>
+                                {formatString(followers)} Followers
+                            </TwittStats>
                             <BtnFollow type="button">Following</BtnFollow>
                         </BottomBox>
                     </TwittCard>
