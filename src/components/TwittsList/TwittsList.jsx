@@ -1,10 +1,10 @@
 import { Twitt } from 'components/Twitt/Twitt';
 import { List } from './TwittsList.styled';
 
-export const TwittsList = () => {
+export const TwittsList = ({ data }) => {
     return (
         <List>
-            <Twitt />
+            <Twitt data={data} />
         </List>
     );
 };

@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 
 export const TwittCard = styled.li`
-    width: 380px;
+    width: 374px;
     height: 460px;
     background-image: linear-gradient(
         114.99deg,
@@ -11,6 +11,12 @@ export const TwittCard = styled.li`
     );
     box-shadow: -2.5777px 6.87386px 20.6216px rgba(0, 0, 0, 0.23);
     border-radius: 20px;
+    @media (min-width: ${props => props.theme.breakpoints.m}) {
+        width: 354px;
+    }
+    @media (min-width: ${props => props.theme.breakpoints.l}) {
+        width: 380px;
+    }
 `;
 
 export const TopBox = styled.div`
