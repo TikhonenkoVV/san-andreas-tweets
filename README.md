@@ -31,10 +31,10 @@ This project is a test case. Stylization of the project is a reference to the cu
 * React
 * React Router
 * JSX
-* Axios
-* React Spinners
-* React Toastify
-* React Select
+* [Axios](https://www.npmjs.com/package/axios)
+* [React Spinners](https://www.npmjs.com/package/react-spinners)
+* [React Toastify](https://www.npmjs.com/package/react-toastify)
+* [React Select](https://www.npmjs.com/package/react-select)
 
 ## Backend
 [Mockapi](https://mockapi.io/)
