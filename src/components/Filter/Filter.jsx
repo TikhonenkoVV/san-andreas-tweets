@@ -2,7 +2,7 @@ import { useState } from 'react';
 import Select from 'react-select';
 import { theme } from 'styles';
 
-export const Filter = () => {
+export const Filter = ({ hendleOnChange }) => {
     const options = [
         { value: 'All', label: 'All' },
         { value: 'Follow', label: 'Follow' },
@@ -42,14 +42,18 @@ export const Filter = () => {
                 fontSize: theme.fontSizes.large,
             },
         }),
-        // menu: styles => ({ ...styles, right: '0', width: '150px' }),
     };
     const [selectedOption, setSelectedOption] = useState(null);
+
+    const hendleChange = e => {
+        setSelectedOption();
+        hendleOnChange(e);
+    };
 
     return (
         <Select
             defaultValue={selectedOption}
-            onChange={setSelectedOption}
+            onChange={hendleChange}
             options={options}
             styles={selectStyles}
             placeholder="Filter"

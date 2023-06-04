@@ -23,18 +23,24 @@ const Tweets = () => {
     const [page, setPage] = useState(1);
     const [tweets, setTweets] = useState([]);
     const [folowingId, setFolowingId] = useState([]);
+    const [filterValue, setFilterValue] = useState('all');
 
     useEffect(() => {
-        hendleFetchFollow().then(data => {
-            if (data.length > 0) {
-                data.map(({ id, tweetsID }) => {
-                    return setFolowingId(prevState => [
-                        ...prevState,
-                        { id, tweetsID },
-                    ]);
-                });
-            }
-        });
+        setIsloading(true);
+        hendleFetchFollow()
+            .then(data => {
+                if (data.length > 0) {
+                    data.map(({ id, tweetsID }) => {
+                        return setFolowingId(prevState => [
+                            ...prevState,
+                            { id, tweetsID },
+                        ]);
+                    });
+                }
+            })
+            .finally(() => {
+                setIsloading(false);
+            });
     }, []);
 
     useEffect(() => {
@@ -89,23 +95,40 @@ const Tweets = () => {
 
     const normalizeTweets = () => {
         const arr = folowingId.map(id => id.tweetsID);
-        return tweets.map(tweet => {
+        const res = tweets.map(tweet => {
             arr.includes(tweet.id)
                 ? (tweet.following = true)
                 : (tweet.following = false);
             return tweet;
         });
+        if (filterValue === 'follow') {
+            const fitered = res.filter(val => !val.following);
+            if (fitered.length < 1) toast('Sorry, not found!');
+            return fitered;
+        }
+        if (filterValue === 'followings') {
+            const fitered = res.filter(val => val.following);
+            if (fitered.length < 1) toast('Sorry, not found!');
+            return fitered;
+        }
+        return res;
+    };
+
+    const finalTweets = normalizeTweets();
+
+    const hendleOnChange = ({ value }) => {
+        setFilterValue(value.toLowerCase());
     };
 
     return (
         <Container>
             <BtnWrapper>
                 <BtnGoBack to={'/'}>Go back</BtnGoBack>
-                <Filter />
+                <Filter hendleOnChange={hendleOnChange} />
             </BtnWrapper>
             {isLoading && <Loader />}
-            <TweetsList data={normalizeTweets()} clickFunk={onFollowClick} />
-            {total && tweets.length < total && (
+            <TweetsList data={finalTweets} clickFunk={onFollowClick} />
+            {total && tweets.length < total && filterValue === 'all' && (
                 <BtnLoadMore type="button" onClick={hendleClick}>
                     Load more
                 </BtnLoadMore>

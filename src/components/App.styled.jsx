@@ -42,10 +42,11 @@ export const Container = styled.div`
 export const BtnWrapper = styled.div`
     display: flex;
     gap: 20px;
-    max-width: 420px;
+    max-width: 450px;
     margin: 0 auto;
     padding-top: 20px;
     @media (min-width: ${props => props.theme.breakpoints.l}) {
+        gap: 50px;
         padding-top: 50px;
     }
 `;
