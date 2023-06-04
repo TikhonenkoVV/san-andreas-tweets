@@ -28,9 +28,9 @@ This project is a test case. Stylization of the project is a reference to the cu
 * 1280px
 
 ## Technologies and Libraries
-* React
-* React Router
-* JSX
+* [React](https://react.dev/)
+* [React Router](https://www.npmjs.com/package/react-router)
+* [JSX](https://react.dev/learn/writing-markup-with-jsx)
 * [Axios](https://www.npmjs.com/package/axios)
 * [React Spinners](https://www.npmjs.com/package/react-spinners)
 * [React Toastify](https://www.npmjs.com/package/react-toastify)
