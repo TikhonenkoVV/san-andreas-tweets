@@ -59,15 +59,12 @@ export const BottomBox = styled.div`
 `;
 
 export const TweetStats = styled.p`
-    margin-bottom: 16px;
+    margin-bottom: 10px;
     text-align: center;
     text-transform: uppercase;
     line-height: 1.2;
     color: ${props => props.theme.colors.text};
     font-size: ${props => props.theme.fontSizes.large};
-    &:nth-of-type(2) {
-        margin-bottom: 26px;
-    }
 `;
 
 export const BtnFollow = styled.button`

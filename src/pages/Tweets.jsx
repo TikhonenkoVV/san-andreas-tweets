@@ -69,7 +69,7 @@ const Tweets = () => {
         setPage(prevPage => (prevPage += 1));
     };
 
-    const onFollowClick = (e, id) => {
+    const onFollowClick = id => {
         const i = folowingId.findIndex(val => val.tweetsID === id);
         if (i >= 0) {
             hendleDeleteFollow(folowingId[i].id);
@@ -81,11 +81,21 @@ const Tweets = () => {
         }
     };
 
+    const normalizeTweets = () => {
+        const arr = folowingId.map(id => id.tweetsID);
+        return tweets.map(tweet => {
+            arr.includes(tweet.id)
+                ? (tweet.following = true)
+                : (tweet.following = false);
+            return tweet;
+        });
+    };
+
     return (
         <Container>
             <BtnGoBack to={'/'}>Go back</BtnGoBack>
             {isLoading && <Loader />}
-            <TweetsList data={tweets} clickFunk={onFollowClick} />
+            <TweetsList data={normalizeTweets()} clickFunk={onFollowClick} />
             {total && tweets.length < total && (
                 <BtnLoadMore type="button" onClick={hendleClick}>
                     Load more

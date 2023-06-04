@@ -23,18 +23,28 @@ export const Tweet = ({ data, clickFunk }) => {
         const followersCount = Number(
             e.target.previousSibling.getAttribute('datatype')
         );
-        e.target.classList.contains('active')
-            ? (e.target.previousSibling.textContent = `
-            ${formatString(followersCount + 1)} Followers`)
-            : (e.target.previousSibling.textContent = `
-            ${formatString(followersCount)} Followers`);
-
-        clickFunk(e, id);
+        if (e.target.classList.contains('active')) {
+            e.target.previousSibling.textContent = `
+            ${formatString(followersCount + 1)} Followers`;
+            e.target.previousSibling.setAttribute(
+                'datatype',
+                followersCount + 1
+            );
+        } else {
+            e.target.previousSibling.textContent = `
+            ${formatString(followersCount - 1)} Followers`;
+            e.target.previousSibling.setAttribute(
+                'datatype',
+                followersCount - 1
+            );
+        }
+        clickFunk(id);
     };
 
     return (
         <>
-            {data.map(({ id, avatar, twitts, followers }) => {
+            {data.map(({ id, user, avatar, twitts, followers, following }) => {
+                if (following) followers += 1;
                 return (
                     <TweetCard key={id}>
                         <TopBox>
@@ -51,6 +61,7 @@ export const Tweet = ({ data, clickFunk }) => {
                             </PhotoFrameBox>
                         </TopBox>
                         <BottomBox>
+                            <TweetStats>{user}</TweetStats>
                             <TweetStats>
                                 {formatString(twitts)} tweets
                             </TweetStats>
@@ -58,10 +69,11 @@ export const Tweet = ({ data, clickFunk }) => {
                                 {formatString(followers)} Followers
                             </TweetStats>
                             <BtnFollow
+                                className={following && 'active'}
                                 type="button"
                                 onClick={e => hendleClick(e, id)}
                             >
-                                Follow
+                                {following ? 'Following' : 'Follow'}
                             </BtnFollow>
                         </BottomBox>
                     </TweetCard>

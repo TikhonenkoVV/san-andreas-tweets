@@ -28,7 +28,7 @@ export const hendleFetchTweets = async (page, limit) => {
     }
 };
 
-export const hendleFetchFollow = async id => {
+export const hendleFetchFollow = async () => {
     try {
         const { data } = await instanseUser.get('/follows');
         return data;
