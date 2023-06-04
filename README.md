@@ -4,10 +4,13 @@ This project is a test case. Stylization of the project is a reference to the cu
 
 ## Interactive elements
 1. The logo takes you to the home page
-2. The "HOME" takes you to the home page
-3. The "TWEETS" takes you to the tweets page
+2. The "HOME" button takes you to the home page
+3. The "TWEETS" button takes you to the tweets page
 
 ![](./assets/screenshot1.jpg)
+
+3. The "GO BACK" button takes you to the home page
+4. The "FILTER" button allows you to filter cards by subscriptions
 
 ![](./assets/screenshot2.jpg)
 
