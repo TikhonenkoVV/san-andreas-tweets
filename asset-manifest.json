@@ -1,10 +1,10 @@
 {
   "files": {
     "main.css": "/san-andreas-tweets/static/css/main.36380e2b.css",
-    "main.js": "/san-andreas-tweets/static/js/main.a0dbda49.js",
+    "main.js": "/san-andreas-tweets/static/js/main.eab7c4cd.js",
     "static/js/574.78570c51.chunk.js": "/san-andreas-tweets/static/js/574.78570c51.chunk.js",
-    "static/js/559.f0e05c44.chunk.js": "/san-andreas-tweets/static/js/559.f0e05c44.chunk.js",
-    "static/js/794.e086cc22.chunk.js": "/san-andreas-tweets/static/js/794.e086cc22.chunk.js",
+    "static/js/147.c8bcc14c.chunk.js": "/san-andreas-tweets/static/js/147.c8bcc14c.chunk.js",
+    "static/js/389.3ff1fb88.chunk.js": "/san-andreas-tweets/static/js/389.3ff1fb88.chunk.js",
     "static/media/background.jpg": "/san-andreas-tweets/static/media/background.9856e0df4c291bca45bd.jpg",
     "static/media/montserrat-v25-latin_cyrillic-600.svg": "/san-andreas-tweets/static/media/montserrat-v25-latin_cyrillic-600.b7a40d9c20fdd266bd2451d023069d29.svg",
     "static/media/montserrat-v25-latin_cyrillic-500.svg": "/san-andreas-tweets/static/media/montserrat-v25-latin_cyrillic-500.5d6f0e09e83ecf8f5f8580125b2ecd44.svg",
@@ -20,13 +20,13 @@
     "static/media/sprite.svg": "/san-andreas-tweets/static/media/sprite.0a63af097a030fba273fdc6afac3bf3f.svg",
     "index.html": "/san-andreas-tweets/index.html",
     "main.36380e2b.css.map": "/san-andreas-tweets/static/css/main.36380e2b.css.map",
-    "main.a0dbda49.js.map": "/san-andreas-tweets/static/js/main.a0dbda49.js.map",
+    "main.eab7c4cd.js.map": "/san-andreas-tweets/static/js/main.eab7c4cd.js.map",
     "574.78570c51.chunk.js.map": "/san-andreas-tweets/static/js/574.78570c51.chunk.js.map",
-    "559.f0e05c44.chunk.js.map": "/san-andreas-tweets/static/js/559.f0e05c44.chunk.js.map",
-    "794.e086cc22.chunk.js.map": "/san-andreas-tweets/static/js/794.e086cc22.chunk.js.map"
+    "147.c8bcc14c.chunk.js.map": "/san-andreas-tweets/static/js/147.c8bcc14c.chunk.js.map",
+    "389.3ff1fb88.chunk.js.map": "/san-andreas-tweets/static/js/389.3ff1fb88.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.36380e2b.css",
-    "static/js/main.a0dbda49.js"
+    "static/js/main.eab7c4cd.js"
   ]
 }
