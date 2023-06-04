@@ -22,6 +22,11 @@ This project is a test case. Stylization of the project is a reference to the cu
 
 ![](./assets/screenshot4.jpg)
 
+## Adaptive design
+* 414px
+* 768px
+* 1280px
+
 ## Technologies and Libraries
 * React
 * React Router
