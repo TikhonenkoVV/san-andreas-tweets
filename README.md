@@ -14,7 +14,7 @@ This project is a test case. Stylization of the project is a reference to the cu
 
 ![](./assets/screenshot2.jpg)
 
-6. The "FOLLOW"/"FOLLOWING" button allows you to follow or unsubscribe from tweets
+6. The "FOLLOW"/"FOLLOWING" buttons allows you to follow or unsubscribe from tweets
 
 ![](./assets/screenshot3.jpg)
 
