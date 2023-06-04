@@ -6,6 +6,7 @@ This project is a test case. Stylization of the project is a reference to the cu
 1. The logo takes you to the home page
 2. The "HOME" takes you to the home page
 3. The "TWEETS" takes you to the tweets page
+!(./assets/screenshot1.jpg)
 
 
 ## Technologies and Libraries
