@@ -30,3 +30,9 @@ This project is a test case. Stylization of the project is a reference to the cu
 * React Spinners
 * React Toastify
 * React Select
+
+## Backend
+[Mockapi](https://mockapi.io/)
+
+## Image storage
+[Firebase storage](https://firebase.google.com/)
