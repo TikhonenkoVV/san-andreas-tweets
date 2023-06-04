@@ -32,7 +32,7 @@ export const Wrapper = styled.div`
 export const Logotype = styled(Link)`
     display: flex;
     width: 100px;
-    height: 40px;
+    height: 100%;
     aspect-ratio: 2 / 1;
     background-image: url(${logoMobile});
     background-position: center;
@@ -74,9 +74,9 @@ export const NavLinkStyled = styled(NavLink)`
         background-color: ${props => props.theme.colors.hover};
         /* pointer-events: none; */
     }
-    @media (min-width: ${props => props.theme.breakpoints.s}) {
+    @media (min-width: ${props => props.theme.breakpoints.m}) {
         width: 100px;
-        font-size: ${props => props.theme.fontSizes.medium};
+        font-size: ${props => props.theme.fontSizes.large};
     }
 `;
 

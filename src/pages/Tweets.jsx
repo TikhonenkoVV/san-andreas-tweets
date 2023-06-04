@@ -1,4 +1,10 @@
-import { BtnGoBack, BtnLoadMore, Container } from 'components/App.styled';
+import {
+    BtnGoBack,
+    BtnLoadMore,
+    BtnWrapper,
+    Container,
+} from 'components/App.styled';
+import { Filter } from 'components/Filter/Filter';
 import { Loader } from 'components/Loader/Loader';
 import { TweetsList } from 'components/TweetsList/TweetsList';
 import { useEffect, useState } from 'react';
@@ -93,7 +99,10 @@ const Tweets = () => {
 
     return (
         <Container>
-            <BtnGoBack to={'/'}>Go back</BtnGoBack>
+            <BtnWrapper>
+                <BtnGoBack to={'/'}>Go back</BtnGoBack>
+                <Filter />
+            </BtnWrapper>
             {isLoading && <Loader />}
             <TweetsList data={normalizeTweets()} clickFunk={onFollowClick} />
             {total && tweets.length < total && (
