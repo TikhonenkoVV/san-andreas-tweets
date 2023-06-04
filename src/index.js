@@ -7,12 +7,12 @@ import { App } from 'components/App';
 import { GlobalStyles, theme } from 'styles';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-    // <React.StrictMode>
-    <BrowserRouter basename="/san-andreas-tweets">
-        <ThemeProvider theme={theme}>
-            <Global styles={GlobalStyles} />
-            <App />
-        </ThemeProvider>
-    </BrowserRouter>
-    // </React.StrictMode>
+    <React.StrictMode>
+        <BrowserRouter basename="/san-andreas-tweets">
+            <ThemeProvider theme={theme}>
+                <Global styles={GlobalStyles} />
+                <App />
+            </ThemeProvider>
+        </BrowserRouter>
+    </React.StrictMode>
 );
