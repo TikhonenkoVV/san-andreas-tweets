@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/san-andreas-tweets/static/css/main.36380e2b.css",
-    "main.js": "/san-andreas-tweets/static/js/main.0e334da4.js",
+    "main.js": "/san-andreas-tweets/static/js/main.3eea09c0.js",
     "static/js/574.1851b7e7.chunk.js": "/san-andreas-tweets/static/js/574.1851b7e7.chunk.js",
     "static/js/147.449e19e5.chunk.js": "/san-andreas-tweets/static/js/147.449e19e5.chunk.js",
     "static/js/389.3ff1fb88.chunk.js": "/san-andreas-tweets/static/js/389.3ff1fb88.chunk.js",
@@ -20,13 +20,13 @@
     "static/media/sprite.svg": "/san-andreas-tweets/static/media/sprite.0a63af097a030fba273fdc6afac3bf3f.svg",
     "index.html": "/san-andreas-tweets/index.html",
     "main.36380e2b.css.map": "/san-andreas-tweets/static/css/main.36380e2b.css.map",
-    "main.0e334da4.js.map": "/san-andreas-tweets/static/js/main.0e334da4.js.map",
+    "main.3eea09c0.js.map": "/san-andreas-tweets/static/js/main.3eea09c0.js.map",
     "574.1851b7e7.chunk.js.map": "/san-andreas-tweets/static/js/574.1851b7e7.chunk.js.map",
     "147.449e19e5.chunk.js.map": "/san-andreas-tweets/static/js/147.449e19e5.chunk.js.map",
     "389.3ff1fb88.chunk.js.map": "/san-andreas-tweets/static/js/389.3ff1fb88.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.36380e2b.css",
-    "static/js/main.0e334da4.js"
+    "static/js/main.3eea09c0.js"
   ]
 }
