@@ -20,7 +20,11 @@ export const LatestTweets = () => {
                         <LatestTweetsCard key={id}>
                             <UserTitle>{user}</UserTitle>
                             <LatestTweetsWrapper>
-                                <LatestTweetsAvatar src={avatar} />
+                                <LatestTweetsAvatar
+                                    width={50}
+                                    height={50}
+                                    src={avatar}
+                                />
                                 <Post>
                                     Lorem ipsum, dolor sit amet consectetur
                                     adipisicing elit. Architecto quod tempore
