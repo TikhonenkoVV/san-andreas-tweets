@@ -41,3 +41,10 @@ This project is a test case. Stylization of the project is a reference to the cu
 
 ## Image storage
 [Firebase storage](https://firebase.google.com/)
+
+## Getting Started
+* Clone the repository to your local machine.
+* Install dependencies by running npm install.
+* Start the project by running npm start.
+* The script will automatically load the live page in the default browser.
+* If the automatic download did not occur, open your browser and navigate to http://localhost:3000.
